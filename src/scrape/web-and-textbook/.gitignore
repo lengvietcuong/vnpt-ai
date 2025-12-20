@@ -1,0 +1,5 @@
+clean
+__pycache__
+downloaded_pdfs
+markdown_output
+venv
