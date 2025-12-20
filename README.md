@@ -43,7 +43,7 @@ docker run \
   --mount type=bind,source="$(pwd)/private_test.json",target=/code/private_test.json \
   --mount type=bind,source="$(pwd)/submission.csv",target=/code/submission.csv \
   --mount type=bind,source="$(pwd)/.env",target=/code/.env \
-  vnpt-ai
+  lengvietcuong/vnpt-ai
 ```
 
 > **Important**: Replace `$(pwd)/private_test.json` and `$(pwd)/submission.csv` with the actual paths on your host machine if needed. The `submission.csv` file must exist before running the container.
