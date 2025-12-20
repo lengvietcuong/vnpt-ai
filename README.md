@@ -38,13 +38,17 @@ docker build . -t vnpt-ai
 
 Run the Docker container with the following command:
 
-```bash
+_For Linux/macOS (bash/zsh):_
+
 docker run \
-  --mount type=bind,source="$(pwd)/private_test.json",target=/code/private_test.json \
+ --mount type=bind,source="$(pwd)/private_test.json",target=/code/private_test.json \
   --mount type=bind,source="$(pwd)/submission.csv",target=/code/submission.csv \
-  --mount type=bind,source="$(pwd)/.env",target=/code/.env \
-  lengvietcuong/vnpt-ai
-```
+ --mount type=bind,source="$(pwd)/.env",target=/code/.env \
+ lengvietcuong/vnpt-ai
+
+_For Windows PowerShell:_
+
+docker run --mount type=bind,source="$PWD/private_test.json",target=/code/private_test.json --mount type=bind,source="$PWD/submission.csv",target=/code/submission.csv --mount type=bind,source="$PWD/.env",target=/code/.env lengvietcuong/vnpt-ai
 
 > **Important**: Replace `$(pwd)/private_test.json` and `$(pwd)/submission.csv` with the actual paths on your host machine if needed. The `submission.csv` file must exist before running the container.
 
